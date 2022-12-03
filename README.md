@@ -6,8 +6,8 @@ This repository serves to backup progress in Advent of Code 2022 (https://advent
 Python + Robot Framework (https://robotframework.org/)
 
 ## Results
-Time to solve individual tasks:
+Tasks resolved (`Py`: in Python; `rf`: in robotframework):
 
-| Day Nr. | Part A time | Part B time | Total Time |
-| ------- | ----------- | ----------- | ---------- |
-|       1 |      10 min |       2 min |     12 min |
+| Day Nr. | Part 1    | Part 2    |
+| ------- | --------- | --------- |
+|       1 | `Py + rf` | `Py + rf` |
