@@ -40,7 +40,7 @@ class RSPLibrary():
     """
     Library for Rock, Paper, Scissors support
     """
-    ROBOT_LIBRARY_SCOPE = 'SUITE'
+    ROBOT_LIBRARY_SCOPE = 'TEST'
 
     def __init__(self):
         self.events = []
@@ -65,17 +65,36 @@ class RSPLibrary():
         return self.events
 
     def get_points(self, input_enemy, input_me):
-        assert isinstance(input_enemy, str)
-        assert isinstance(input_me, str)
-        assert input_enemy in ('A', 'B', 'C')
-        assert input_me in ('X', 'Y', 'Z')
+        # Commented out for performance reasons
 
-        return POINTS[input_me][input_enemy]
+        # assert isinstance(input_enemy, str)
+        # assert isinstance(input_me, str)
+        # assert input_enemy in ('A', 'B', 'C')
+        # assert input_me in ('X', 'Y', 'Z')
+
+        # return POINTS[input_me][input_enemy]
+
+        raise NotImplementedError()
 
     def get_strategic_event(self, input_enemy, strategy):
-        assert isinstance(input_enemy, str)
-        assert isinstance(strategy, str)
-        assert input_enemy in ('A', 'B', 'C')
-        assert strategy in ('X', 'Y', 'Z')
+        # Commented out for performance reasons
 
-        return STRATEGY[input_enemy][strategy]
+        # assert isinstance(input_enemy, str)
+        # assert isinstance(strategy, str)
+        # assert input_enemy in ('A', 'B', 'C')
+        # assert strategy in ('X', 'Y', 'Z')
+
+        # return STRATEGY[input_enemy][strategy]
+
+        raise NotImplementedError()
+
+    def calculate_points_from_events_and_sum_them(self):
+        points = 0
+        for event in self.events:
+            points += POINTS[event['me']][event['enemy']]
+
+        return points
+
+    def evaluate_actions_based_on_strategy(self):
+        for index, strategy in enumerate(self.events):
+            self.events[index]['me'] = STRATEGY[strategy['enemy']][strategy['me']]
