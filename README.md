@@ -11,3 +11,4 @@ Tasks resolved (`Py`: in Python; `rf`: in robotframework):
 | Day Nr. | Part 1    | Part 2    |
 | ------- | --------- | --------- |
 |       1 | `Py + rf` | `Py + rf` |
+|       2 | `Py + rf` | `Py + rf` |
