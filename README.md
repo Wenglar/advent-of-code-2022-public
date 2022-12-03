@@ -12,3 +12,4 @@ Tasks resolved (`Py`: in Python; `rf`: in robotframework):
 | ------- | --------- | --------- |
 |       1 | `Py + rf` | `Py + rf` |
 |       2 | `Py + rf` | `Py + rf` |
+|       3 | `Py + rf` | `Py + rf` |
