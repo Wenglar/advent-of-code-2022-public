@@ -1,6 +1,6 @@
 # Advent of Code 2022
 
-This repository serves to backup progress in Advent of Code 2021.
+This repository serves to backup progress in Advent of Code 2022 (https://adventofcode.com/2022).
 
 ## Programming language
 Python + Robot Framework (https://robotframework.org/)
