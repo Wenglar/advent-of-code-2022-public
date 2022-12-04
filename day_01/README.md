@@ -3,4 +3,4 @@
 
 ## Notes
 - To run Quick & Dirty solution: `python get_most_calories.py`
-- To run robotframework solution: `robot maximum_calories.robot`
+- To run robotframework solution: `robot .`

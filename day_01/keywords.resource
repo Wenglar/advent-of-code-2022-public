@@ -16,16 +16,16 @@ Sort Elves In Ascending Order
 
 Get Elf With Maximum
     ${max} =            Get Maximum Value
-    Set Test Variable   ${max}
+    Set Task Variable   ${max}
 
 Get 1 Last Elf
     ${last_1_elf} =     Get Last N Values       ${1}
-    Set Test Variable   ${last_1_elf}
+    Set Task Variable   ${last_1_elf}
 
 Get ${number:\d+} Last Elves
     ${number} =         Convert To Integer  ${number}
     ${last_3_elves} =   Get Last N Values   ${number}
-    Set Test Variable   ${last_3_elves}
+    Set Task Variable   ${last_3_elves}
 
 Verify Last Elf Has Maximum
     Should Be Equal     ${last_1_elf}[0]    ${max}

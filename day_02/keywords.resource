@@ -23,7 +23,7 @@ Execute Part 1 Strategy
 
     ${result} =     Calculate Points From Events And Sum Them
 
-    Set Test Variable   ${result}
+    Set Task Variable   ${result}
 
 
 Execute Part 2 Strategy
@@ -42,7 +42,7 @@ Execute Part 2 Strategy
     Evaluate Actions Based On Strategy
     ${result} =     Calculate Points From Events And Sum Them
 
-    Set Test Variable   ${result}
+    Set Task Variable   ${result}
 
 Log Result
     Log                 \n\tTotal score is: "${result}"     console=True

@@ -4,7 +4,7 @@ Resource        keywords.resource
 *** Variables ***
 ${FILE}     ${CURDIR}/input.txt
 
-*** Test Cases ***
+*** Tasks ***
 Total Maximum
     Load Elf Calories From File     ${FILE}
     Get Elf With Maximum

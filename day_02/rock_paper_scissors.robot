@@ -4,7 +4,7 @@ Resource        keywords.resource
 *** Variables ***
 ${FILE}     ${CURDIR}/input.txt
 
-*** Test Cases ***
+*** Tasks ***
 Strategy 1
     Load Events From File       ${FILE}
     Execute Part 1 Strategy
