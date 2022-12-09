@@ -20,3 +20,4 @@ Python + Robot Framework (https://robotframework.org/)
 |       6 |       6 min |       2 min |      8 min |         x |         x |
 |       7 |  1 h 15 min |       4 min | 1 h 19 min |         x |         x |
 |       8 |      22 min |      10 min |     32 min |         x |         x |
+|       9 |      28 min |      27 min |     55 min |         x |         x |

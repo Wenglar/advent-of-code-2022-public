@@ -6,12 +6,6 @@ from pathlib import Path
 
 from robot.api.logger import info, debug, trace, console  # type:ignore
 
-directory_template = {
-    'files': {},
-    'folders': [],
-    'size': 0
-}
-
 
 class TreeLibrary():
     """
