@@ -1,4 +1,2 @@
 *.pyc
-**/log.html
-**/output.xml
-**/report.html
+**/day*/*[.html,.xml]

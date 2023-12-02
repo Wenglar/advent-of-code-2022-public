@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.7.9 on win32)" generated="20231202 23:17:22.734" rpa="true" schemaversion="3">
+<suite id="s1" name="Advent-Of-Code-2022" source="D:\GitRepos\github\advent-of-code-2022">
+<suite id="s1-s1" name="Day 01" source="D:\GitRepos\github\advent-of-code-2022\day_01">
+<suite id="s1-s1-s1" name="Calorie Counting" source="D:\GitRepos\github\advent-of-code-2022\day_01\calorie_counting.robot">
+<test id="s1-s1-s1-t1" name="Total Maximum" line="8">
+<kw name="Load Elf Calories From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load And Process File" library="CustomLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.765" endtime="20231202 23:17:22.767"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.765" endtime="20231202 23:17:22.767"/>
+</kw>
+<kw name="Get Elf With Maximum" library="keywords">
+<kw name="Get Maximum Value" library="CustomLibrary">
+<var>${max}</var>
+<msg timestamp="20231202 23:17:22.768" level="INFO">${max} = 69177</msg>
+<status status="PASS" starttime="20231202 23:17:22.767" endtime="20231202 23:17:22.768"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${max}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.768" level="INFO">${max} = 69177</msg>
+<status status="PASS" starttime="20231202 23:17:22.768" endtime="20231202 23:17:22.768"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.767" endtime="20231202 23:17:22.768"/>
+</kw>
+<kw name="Sort Elves In Ascending Order" library="keywords">
+<kw name="Sort Values" library="CustomLibrary">
+<status status="PASS" starttime="20231202 23:17:22.769" endtime="20231202 23:17:22.769"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.769" endtime="20231202 23:17:22.769"/>
+</kw>
+<kw name="Get 1 Last Elf" library="keywords">
+<kw name="Get Last N Values" library="CustomLibrary">
+<var>${last_1_elf}</var>
+<arg>${1}</arg>
+<msg timestamp="20231202 23:17:22.770" level="INFO">${last_1_elf} = [69177]</msg>
+<status status="PASS" starttime="20231202 23:17:22.770" endtime="20231202 23:17:22.770"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${last_1_elf}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.770" level="INFO">${last_1_elf} = [69177]</msg>
+<status status="PASS" starttime="20231202 23:17:22.770" endtime="20231202 23:17:22.770"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.770" endtime="20231202 23:17:22.771"/>
+</kw>
+<kw name="Verify Last Elf Has Maximum" library="keywords">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${last_1_elf}[0]</arg>
+<arg>${max}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231202 23:17:22.771" endtime="20231202 23:17:22.771"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>\n\tCalories of last elf: "${last_1_elf}[0]"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.771" level="INFO">
+	Calories of last elf: "69177"</msg>
+<status status="PASS" starttime="20231202 23:17:22.771" endtime="20231202 23:17:22.772"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.771" endtime="20231202 23:17:22.772"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.764" endtime="20231202 23:17:22.773"/>
+</test>
+<test id="s1-s1-s1-t2" name="Total Of 3 Maximum" line="15">
+<kw name="Load Elf Calories From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load And Process File" library="CustomLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.775" endtime="20231202 23:17:22.777"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.774" endtime="20231202 23:17:22.777"/>
+</kw>
+<kw name="Sort Elves In Ascending Order" library="keywords">
+<kw name="Sort Values" library="CustomLibrary">
+<status status="PASS" starttime="20231202 23:17:22.777" endtime="20231202 23:17:22.777"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.777" endtime="20231202 23:17:22.777"/>
+</kw>
+<kw name="Get 3 Last Elves" library="keywords" sourcename="Get ${number:\d+} Last Elves">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${number}</var>
+<arg>${number}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:22.778" level="INFO">${number} = 3</msg>
+<status status="PASS" starttime="20231202 23:17:22.778" endtime="20231202 23:17:22.778"/>
+</kw>
+<kw name="Get Last N Values" library="CustomLibrary">
+<var>${last_3_elves}</var>
+<arg>${number}</arg>
+<msg timestamp="20231202 23:17:22.778" level="INFO">${last_3_elves} = [69108, 69171, 69177]</msg>
+<status status="PASS" starttime="20231202 23:17:22.778" endtime="20231202 23:17:22.778"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${last_3_elves}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.779" level="INFO">${last_3_elves} = [69108, 69171, 69177]</msg>
+<status status="PASS" starttime="20231202 23:17:22.778" endtime="20231202 23:17:22.779"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.778" endtime="20231202 23:17:22.779"/>
+</kw>
+<kw name="Log Info For 3 Last Elves" library="keywords">
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>sum(map(int, ${last_3_elves}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231202 23:17:22.780" level="INFO">${sum} = 207456</msg>
+<status status="PASS" starttime="20231202 23:17:22.779" endtime="20231202 23:17:22.780"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>\n\tCalories of 3 last elves: List "${last_3_elves}" gives total of "${sum}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.780" level="INFO">
+	Calories of 3 last elves: List "[69108, 69171, 69177]" gives total of "207456"</msg>
+<status status="PASS" starttime="20231202 23:17:22.780" endtime="20231202 23:17:22.780"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.779" endtime="20231202 23:17:22.781"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.774" endtime="20231202 23:17:22.781"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.758" endtime="20231202 23:17:22.782"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.755" endtime="20231202 23:17:22.784"/>
+</suite>
+<suite id="s1-s2" name="Day 02" source="D:\GitRepos\github\advent-of-code-2022\day_02">
+<suite id="s1-s2-s1" name="Rock Paper Scissors" source="D:\GitRepos\github\advent-of-code-2022\day_02\rock_paper_scissors.robot">
+<test id="s1-s2-s1-t1" name="Strategy 1" line="8">
+<kw name="Load Events From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load File" library="RSPLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.797" endtime="20231202 23:17:22.799"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.797" endtime="20231202 23:17:22.799"/>
+</kw>
+<kw name="Execute Part 1 Strategy" library="keywords">
+<kw name="Calculate Points From Events And Sum Them" library="RSPLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.800" level="INFO">${result} = 8890</msg>
+<status status="PASS" starttime="20231202 23:17:22.799" endtime="20231202 23:17:22.800"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.800" level="INFO">${result} = 8890</msg>
+<status status="PASS" starttime="20231202 23:17:22.800" endtime="20231202 23:17:22.800"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.799" endtime="20231202 23:17:22.800"/>
+</kw>
+<kw name="Log Result" library="keywords">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tTotal score is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.801" level="INFO">
+	Total score is: "8890"</msg>
+<status status="PASS" starttime="20231202 23:17:22.800" endtime="20231202 23:17:22.801"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.800" endtime="20231202 23:17:22.802"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.797" endtime="20231202 23:17:22.802"/>
+</test>
+<test id="s1-s2-s1-t2" name="Strategy 2" line="13">
+<kw name="Load Events From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load File" library="RSPLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.804" endtime="20231202 23:17:22.806"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.804" endtime="20231202 23:17:22.807"/>
+</kw>
+<kw name="Execute Part 2 Strategy" library="keywords">
+<kw name="Evaluate Actions Based On Strategy" library="RSPLibrary">
+<status status="PASS" starttime="20231202 23:17:22.807" endtime="20231202 23:17:22.808"/>
+</kw>
+<kw name="Calculate Points From Events And Sum Them" library="RSPLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.809" level="INFO">${result} = 10238</msg>
+<status status="PASS" starttime="20231202 23:17:22.808" endtime="20231202 23:17:22.809"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.809" level="INFO">${result} = 10238</msg>
+<status status="PASS" starttime="20231202 23:17:22.809" endtime="20231202 23:17:22.809"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.807" endtime="20231202 23:17:22.809"/>
+</kw>
+<kw name="Log Result" library="keywords">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tTotal score is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.810" level="INFO">
+	Total score is: "10238"</msg>
+<status status="PASS" starttime="20231202 23:17:22.810" endtime="20231202 23:17:22.810"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.810" endtime="20231202 23:17:22.810"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.803" endtime="20231202 23:17:22.811"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.788" endtime="20231202 23:17:22.812"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.785" endtime="20231202 23:17:22.813"/>
+</suite>
+<suite id="s1-s3" name="Day 03" source="D:\GitRepos\github\advent-of-code-2022\day_03">
+<suite id="s1-s3-s1" name="Rucksack Reorganization" source="D:\GitRepos\github\advent-of-code-2022\day_03\rucksack_reorganization.robot">
+<test id="s1-s3-s1-t1" name="Find Duplicates In Compartments Of Rucksacks And Sum Their Values" line="8">
+<kw name="Load Rucksacks From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load File" library="RucksackLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.825" endtime="20231202 23:17:22.826"/>
+</kw>
+<kw name="Validate Rucksacks" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.826" endtime="20231202 23:17:22.826"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.825" endtime="20231202 23:17:22.826"/>
+</kw>
+<kw name="Split Rucksacks To Compartments And Find Duplicates" library="keywords">
+<kw name="Get Compartment Duplicates" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.827" endtime="20231202 23:17:22.828"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.826" endtime="20231202 23:17:22.828"/>
+</kw>
+<kw name="Evaluate Duplicates And Sum Their Values" library="keywords">
+<kw name="Evaluate Duplicates" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.828" endtime="20231202 23:17:22.829"/>
+</kw>
+<kw name="Validate Duplicate Values" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.829" endtime="20231202 23:17:22.829"/>
+</kw>
+<kw name="Sum Duplicates" library="RucksackLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.829" level="INFO">${result} = 7821</msg>
+<status status="PASS" starttime="20231202 23:17:22.829" endtime="20231202 23:17:22.829"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.829" level="INFO">${result} = 7821</msg>
+<status status="PASS" starttime="20231202 23:17:22.829" endtime="20231202 23:17:22.829"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.828" endtime="20231202 23:17:22.829"/>
+</kw>
+<kw name="Log Result" library="keywords">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tTotal value of duplicates is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.830" level="INFO">
+	Total value of duplicates is: "7821"</msg>
+<status status="PASS" starttime="20231202 23:17:22.830" endtime="20231202 23:17:22.831"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.830" endtime="20231202 23:17:22.831"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.824" endtime="20231202 23:17:22.831"/>
+</test>
+<test id="s1-s3-s1-t2" name="Find Duplicates In Triplet Groups of Rucksacks And Sum Their Values" line="14">
+<kw name="Load Rucksacks From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load File" library="RucksackLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.833" endtime="20231202 23:17:22.833"/>
+</kw>
+<kw name="Validate Rucksacks" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.833" endtime="20231202 23:17:22.834"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.833" endtime="20231202 23:17:22.834"/>
+</kw>
+<kw name="Group Rucksacks To Triplets And Find Duplicates" library="keywords">
+<kw name="Get Triplet Duplicates" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.834" endtime="20231202 23:17:22.863"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.834" endtime="20231202 23:17:22.863"/>
+</kw>
+<kw name="Evaluate Duplicates And Sum Their Values" library="keywords">
+<kw name="Evaluate Duplicates" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.864" endtime="20231202 23:17:22.865"/>
+</kw>
+<kw name="Validate Duplicate Values" library="RucksackLibrary">
+<status status="PASS" starttime="20231202 23:17:22.865" endtime="20231202 23:17:22.865"/>
+</kw>
+<kw name="Sum Duplicates" library="RucksackLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.865" level="INFO">${result} = 2752</msg>
+<status status="PASS" starttime="20231202 23:17:22.865" endtime="20231202 23:17:22.865"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.865" level="INFO">${result} = 2752</msg>
+<status status="PASS" starttime="20231202 23:17:22.865" endtime="20231202 23:17:22.865"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.864" endtime="20231202 23:17:22.866"/>
+</kw>
+<kw name="Log Result" library="keywords">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tTotal value of duplicates is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.867" level="INFO">
+	Total value of duplicates is: "2752"</msg>
+<status status="PASS" starttime="20231202 23:17:22.866" endtime="20231202 23:17:22.867"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.866" endtime="20231202 23:17:22.867"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.832" endtime="20231202 23:17:22.868"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.818" endtime="20231202 23:17:22.869"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.815" endtime="20231202 23:17:22.870"/>
+</suite>
+<suite id="s1-s4" name="Day 04" source="D:\GitRepos\github\advent-of-code-2022\day_04">
+<suite id="s1-s4-s1" name="Camp Cleanup" source="D:\GitRepos\github\advent-of-code-2022\day_04\camp_cleanup.robot">
+<test id="s1-s4-s1-t1" name="Count Assignment Pairs Where One Fully Contains The Other" line="8">
+<kw name="Load Assignments From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load File" library="AssignmentsLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.885" endtime="20231202 23:17:22.887"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.885" endtime="20231202 23:17:22.887"/>
+</kw>
+<kw name="Count Pairs Where One Is Redundant" library="keywords">
+<kw name="Get Count Of Firsts In Seconds" library="AssignmentsLibrary">
+<var>${part1}</var>
+<msg timestamp="20231202 23:17:22.888" level="INFO">${part1} = 204</msg>
+<status status="PASS" starttime="20231202 23:17:22.888" endtime="20231202 23:17:22.888"/>
+</kw>
+<kw name="Get Count Of Seconds In Firsts" library="AssignmentsLibrary">
+<var>${part2}</var>
+<msg timestamp="20231202 23:17:22.888" level="INFO">${part2} = 233</msg>
+<status status="PASS" starttime="20231202 23:17:22.888" endtime="20231202 23:17:22.888"/>
+</kw>
+<kw name="Get Count Of Identical" library="AssignmentsLibrary">
+<var>${identical}</var>
+<msg timestamp="20231202 23:17:22.889" level="INFO">${identical} = 24</msg>
+<status status="PASS" starttime="20231202 23:17:22.888" endtime="20231202 23:17:22.889"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${result}</var>
+<arg>${part1} + ${part2} - ${identical}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231202 23:17:22.889" level="INFO">${result} = 413</msg>
+<status status="PASS" starttime="20231202 23:17:22.889" endtime="20231202 23:17:22.889"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.889" level="INFO">${result} = 413</msg>
+<status status="PASS" starttime="20231202 23:17:22.889" endtime="20231202 23:17:22.889"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.888" endtime="20231202 23:17:22.889"/>
+</kw>
+<kw name="Log Result For Redundancies" library="keywords" sourcename="Log Result For ${strategy}">
+<kw name="Convert To Lower Case" library="String">
+<var>${strategy}</var>
+<arg>${strategy}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20231202 23:17:22.890" level="INFO">${strategy} = redundancies</msg>
+<status status="PASS" starttime="20231202 23:17:22.890" endtime="20231202 23:17:22.890"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe number of ${strategy} is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.890" level="INFO">
+	The number of redundancies is: "413"</msg>
+<status status="PASS" starttime="20231202 23:17:22.890" endtime="20231202 23:17:22.891"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.890" endtime="20231202 23:17:22.891"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.884" endtime="20231202 23:17:22.892"/>
+</test>
+<test id="s1-s4-s1-t2" name="Count Assignment Pairs Where There Is An Overlap" line="13">
+<kw name="Load Assignments From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Load File" library="AssignmentsLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.893" endtime="20231202 23:17:22.895"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.893" endtime="20231202 23:17:22.895"/>
+</kw>
+<kw name="Count Pairs That Overlap" library="keywords">
+<kw name="Get Count Of Overlaps" library="AssignmentsLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.896" level="INFO">${result} = 806</msg>
+<status status="PASS" starttime="20231202 23:17:22.896" endtime="20231202 23:17:22.896"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.897" level="INFO">${result} = 806</msg>
+<status status="PASS" starttime="20231202 23:17:22.896" endtime="20231202 23:17:22.897"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.896" endtime="20231202 23:17:22.897"/>
+</kw>
+<kw name="Log Result For Overlaps" library="keywords" sourcename="Log Result For ${strategy}">
+<kw name="Convert To Lower Case" library="String">
+<var>${strategy}</var>
+<arg>${strategy}</arg>
+<doc>Converts string to lower case.</doc>
+<msg timestamp="20231202 23:17:22.898" level="INFO">${strategy} = overlaps</msg>
+<status status="PASS" starttime="20231202 23:17:22.897" endtime="20231202 23:17:22.898"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe number of ${strategy} is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.898" level="INFO">
+	The number of overlaps is: "806"</msg>
+<status status="PASS" starttime="20231202 23:17:22.898" endtime="20231202 23:17:22.898"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.897" endtime="20231202 23:17:22.899"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.892" endtime="20231202 23:17:22.899"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.874" endtime="20231202 23:17:22.900"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.872" endtime="20231202 23:17:22.902"/>
+</suite>
+<suite id="s1-s5" name="Day 05" source="D:\GitRepos\github\advent-of-code-2022\day_05">
+<suite id="s1-s5-s1" name="Supply Stacks" source="D:\GitRepos\github\advent-of-code-2022\day_05\supply_stacks.robot">
+<test id="s1-s5-s1-t1" name="Get Top Row Using CrateMover 9000" line="8">
+<kw name="Load Initial State And Steps From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="CratesLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.915" endtime="20231202 23:17:22.916"/>
+</kw>
+<kw name="Extract Initial State And Steps" library="CratesLibrary">
+<status status="PASS" starttime="20231202 23:17:22.916" endtime="20231202 23:17:22.917"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.914" endtime="20231202 23:17:22.917"/>
+</kw>
+<kw name="Apply Steps Using CrateMover 9000" library="keywords" sourcename="Apply Steps Using ${name} ${subname:\d+}">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${number}</var>
+<arg>${subname}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:22.917" level="INFO">${number} = 9000</msg>
+<status status="PASS" starttime="20231202 23:17:22.917" endtime="20231202 23:17:22.917"/>
+</kw>
+<kw name="Validate Crane" library="CratesLibrary">
+<arg>${number}</arg>
+<status status="PASS" starttime="20231202 23:17:22.917" endtime="20231202 23:17:22.918"/>
+</kw>
+<kw name="Apply Steps" library="CratesLibrary">
+<var>${identical}</var>
+<arg>${number}</arg>
+<msg timestamp="20231202 23:17:22.919" level="INFO">${identical} = None</msg>
+<status status="PASS" starttime="20231202 23:17:22.918" endtime="20231202 23:17:22.919"/>
+</kw>
+<kw name="Get Top Row" library="CratesLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.919" level="INFO">${result} = SVFDLGLWV</msg>
+<status status="PASS" starttime="20231202 23:17:22.919" endtime="20231202 23:17:22.919"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.919" level="INFO">${result} = SVFDLGLWV</msg>
+<status status="PASS" starttime="20231202 23:17:22.919" endtime="20231202 23:17:22.919"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.917" endtime="20231202 23:17:22.919"/>
+</kw>
+<kw name="Log Top Row For CrateMover 9000" library="keywords" sourcename="Log Top Row For ${name} ${subname:\d+}">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe top row after using ${name} ${subname} is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.920" level="INFO">
+	The top row after using CrateMover 9000 is: "SVFDLGLWV"</msg>
+<status status="PASS" starttime="20231202 23:17:22.920" endtime="20231202 23:17:22.921"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.919" endtime="20231202 23:17:22.921"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.913" endtime="20231202 23:17:22.921"/>
+</test>
+<test id="s1-s5-s1-t2" name="Get Top Row Using CrateMover 9001" line="13">
+<kw name="Load Initial State And Steps From File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="CratesLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.923" endtime="20231202 23:17:22.924"/>
+</kw>
+<kw name="Extract Initial State And Steps" library="CratesLibrary">
+<status status="PASS" starttime="20231202 23:17:22.924" endtime="20231202 23:17:22.924"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.923" endtime="20231202 23:17:22.925"/>
+</kw>
+<kw name="Apply Steps Using CrateMover 9001" library="keywords" sourcename="Apply Steps Using ${name} ${subname:\d+}">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${number}</var>
+<arg>${subname}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:22.925" level="INFO">${number} = 9001</msg>
+<status status="PASS" starttime="20231202 23:17:22.925" endtime="20231202 23:17:22.925"/>
+</kw>
+<kw name="Validate Crane" library="CratesLibrary">
+<arg>${number}</arg>
+<status status="PASS" starttime="20231202 23:17:22.925" endtime="20231202 23:17:22.926"/>
+</kw>
+<kw name="Apply Steps" library="CratesLibrary">
+<var>${identical}</var>
+<arg>${number}</arg>
+<msg timestamp="20231202 23:17:22.927" level="INFO">${identical} = None</msg>
+<status status="PASS" starttime="20231202 23:17:22.926" endtime="20231202 23:17:22.927"/>
+</kw>
+<kw name="Get Top Row" library="CratesLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:22.927" level="INFO">${result} = DCVTCVPCL</msg>
+<status status="PASS" starttime="20231202 23:17:22.927" endtime="20231202 23:17:22.927"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.927" level="INFO">${result} = DCVTCVPCL</msg>
+<status status="PASS" starttime="20231202 23:17:22.927" endtime="20231202 23:17:22.927"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.925" endtime="20231202 23:17:22.928"/>
+</kw>
+<kw name="Log Top Row For CrateMover 9001" library="keywords" sourcename="Log Top Row For ${name} ${subname:\d+}">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe top row after using ${name} ${subname} is: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.928" level="INFO">
+	The top row after using CrateMover 9001 is: "DCVTCVPCL"</msg>
+<status status="PASS" starttime="20231202 23:17:22.928" endtime="20231202 23:17:22.929"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.928" endtime="20231202 23:17:22.929"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.922" endtime="20231202 23:17:22.929"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.906" endtime="20231202 23:17:22.930"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.903" endtime="20231202 23:17:22.932"/>
+</suite>
+<suite id="s1-s6" name="Day 06" source="D:\GitRepos\github\advent-of-code-2022\day_06">
+<suite id="s1-s6-s1" name="Tuning Trouble" source="D:\GitRepos\github\advent-of-code-2022\day_06\tuning_trouble.robot">
+<kw name="Prepare Stream File" library="keywords" type="SETUP">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="TuningLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.942" endtime="20231202 23:17:22.942"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.941" endtime="20231202 23:17:22.942"/>
+</kw>
+<test id="s1-s6-s1-t1" name="Start-Of-Packet Marker Position" line="11">
+<kw name="Count Characters Until First Start-Of-Packet Marker Received" library="keywords">
+<kw name="Get First Unique Set" library="TuningLibrary">
+<var>${result}</var>
+<arg>${4}</arg>
+<msg timestamp="20231202 23:17:22.944" level="INFO">${result} = 1578</msg>
+<status status="PASS" starttime="20231202 23:17:22.943" endtime="20231202 23:17:22.944"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.945" level="INFO">${result} = 1578</msg>
+<status status="PASS" starttime="20231202 23:17:22.944" endtime="20231202 23:17:22.945"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.942" endtime="20231202 23:17:22.945"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe number of characters received: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.946" level="INFO">
+	The number of characters received: "1578"</msg>
+<status status="PASS" starttime="20231202 23:17:22.946" endtime="20231202 23:17:22.946"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.945" endtime="20231202 23:17:22.946"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.942" endtime="20231202 23:17:22.947"/>
+</test>
+<test id="s1-s6-s1-t2" name="Start-Of-Message Marker Position" line="14">
+<kw name="Count Characters Until First Start-Of-Message Marker Received" library="keywords">
+<kw name="Get First Unique Set" library="TuningLibrary">
+<var>${result}</var>
+<arg>${14}</arg>
+<msg timestamp="20231202 23:17:22.951" level="INFO">${result} = 2178</msg>
+<status status="PASS" starttime="20231202 23:17:22.949" endtime="20231202 23:17:22.951"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:22.951" level="INFO">${result} = 2178</msg>
+<status status="PASS" starttime="20231202 23:17:22.951" endtime="20231202 23:17:22.951"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.948" endtime="20231202 23:17:22.951"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe number of characters received: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:22.952" level="INFO">
+	The number of characters received: "2178"</msg>
+<status status="PASS" starttime="20231202 23:17:22.952" endtime="20231202 23:17:22.953"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.951" endtime="20231202 23:17:22.953"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.948" endtime="20231202 23:17:22.953"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.936" endtime="20231202 23:17:22.954"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.933" endtime="20231202 23:17:22.955"/>
+</suite>
+<suite id="s1-s7" name="Day 07" source="D:\GitRepos\github\advent-of-code-2022\day_07">
+<suite id="s1-s7-s1" name="No Space Left On Device" source="D:\GitRepos\github\advent-of-code-2022\day_07\no_space_left_on_device.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare Command History File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Extract File System From File</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare Command History File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="SpaceLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:22.967" endtime="20231202 23:17:22.967"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.967" endtime="20231202 23:17:22.967"/>
+</kw>
+<kw name="Extract File System From File" library="keywords">
+<kw name="Extract File System" library="SpaceLibrary">
+<status status="PASS" starttime="20231202 23:17:22.968" endtime="20231202 23:17:23.038"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.967" endtime="20231202 23:17:23.039"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:22.966" endtime="20231202 23:17:23.039"/>
+</kw>
+<test id="s1-s7-s1-t1" name="Sum Of Total Sizes" line="11">
+<kw name="Calculate Total Sum Of Folders Of Maximum Size 100000" library="keywords" sourcename="Calculate Total Sum Of Folders Of Maximum Size ${number:\d+}">
+<kw name="Set Variable" library="BuiltIn">
+<var>${log_text}</var>
+<arg>The sum of total folder sizes smaller than ${number} is</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231202 23:17:23.040" level="INFO">${log_text} = The sum of total folder sizes smaller than 100000 is</msg>
+<status status="PASS" starttime="20231202 23:17:23.040" endtime="20231202 23:17:23.040"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${number}</var>
+<arg>${number}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.041" level="INFO">${number} = 100000</msg>
+<status status="PASS" starttime="20231202 23:17:23.040" endtime="20231202 23:17:23.041"/>
+</kw>
+<kw name="Get Sum Of Sizes Where Maxsize" library="SpaceLibrary">
+<var>${result}</var>
+<arg>${number}</arg>
+<msg timestamp="20231202 23:17:23.041" level="INFO">${result} = 919137</msg>
+<status status="PASS" starttime="20231202 23:17:23.041" endtime="20231202 23:17:23.041"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.041" level="INFO">${result} = 919137</msg>
+<status status="PASS" starttime="20231202 23:17:23.041" endtime="20231202 23:17:23.041"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${log_text}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.041" level="INFO">${log_text} = The sum of total folder sizes smaller than 100000 is</msg>
+<status status="PASS" starttime="20231202 23:17:23.041" endtime="20231202 23:17:23.041"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.040" endtime="20231202 23:17:23.042"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\t${log_text}: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.043" level="INFO">
+	The sum of total folder sizes smaller than 100000 is: "919137"</msg>
+<status status="PASS" starttime="20231202 23:17:23.042" endtime="20231202 23:17:23.043"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.042" endtime="20231202 23:17:23.043"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.039" endtime="20231202 23:17:23.044"/>
+</test>
+<test id="s1-s7-s1-t2" name="Smallest Folder To Delete" line="14">
+<kw name="Find The Lowest Folder Total Size To Get At Least 30000000 Out Of 70000000 freed." library="keywords" sourcename="Find The Lowest Folder Total Size To Get At Least ${needed:\d+} Out Of ${total:\d+} freed.">
+<kw name="Set Variable" library="BuiltIn">
+<var>${log_text}</var>
+<arg>The lowest folder total size to free enough space is</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231202 23:17:23.046" level="INFO">${log_text} = The lowest folder total size to free enough space is</msg>
+<status status="PASS" starttime="20231202 23:17:23.045" endtime="20231202 23:17:23.046"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${needed}</var>
+<arg>${needed}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.046" level="INFO">${needed} = 30000000</msg>
+<status status="PASS" starttime="20231202 23:17:23.046" endtime="20231202 23:17:23.046"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${total}</var>
+<arg>${total}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.046" level="INFO">${total} = 70000000</msg>
+<status status="PASS" starttime="20231202 23:17:23.046" endtime="20231202 23:17:23.046"/>
+</kw>
+<kw name="Get Lowest To Free Enough" library="SpaceLibrary">
+<var>${result}</var>
+<arg>${needed}</arg>
+<arg>${total}</arg>
+<msg timestamp="20231202 23:17:23.046" level="INFO">${result} = 2877389</msg>
+<status status="PASS" starttime="20231202 23:17:23.046" endtime="20231202 23:17:23.046"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.047" level="INFO">${result} = 2877389</msg>
+<status status="PASS" starttime="20231202 23:17:23.047" endtime="20231202 23:17:23.047"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${log_text}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.047" level="INFO">${log_text} = The lowest folder total size to free enough space is</msg>
+<status status="PASS" starttime="20231202 23:17:23.047" endtime="20231202 23:17:23.047"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.045" endtime="20231202 23:17:23.047"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\t${log_text}: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.048" level="INFO">
+	The lowest folder total size to free enough space is: "2877389"</msg>
+<status status="PASS" starttime="20231202 23:17:23.048" endtime="20231202 23:17:23.048"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.048" endtime="20231202 23:17:23.049"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.045" endtime="20231202 23:17:23.049"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:22.959" endtime="20231202 23:17:23.050"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.957" endtime="20231202 23:17:23.051"/>
+</suite>
+<suite id="s1-s8" name="Day 08" source="D:\GitRepos\github\advent-of-code-2022\day_08">
+<suite id="s1-s8-s1" name="Tree Top Tree House" source="D:\GitRepos\github\advent-of-code-2022\day_08\tree_top_tree_house.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Extract Forest Map From File</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="TreeLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.063" endtime="20231202 23:17:23.063"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.063" endtime="20231202 23:17:23.063"/>
+</kw>
+<kw name="Extract Forest Map From File" library="keywords">
+<kw name="Load Forest Layout" library="TreeLibrary">
+<status status="PASS" starttime="20231202 23:17:23.063" endtime="20231202 23:17:23.066"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.063" endtime="20231202 23:17:23.066"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.062" endtime="20231202 23:17:23.066"/>
+</kw>
+<test id="s1-s8-s1-t1" name="Count Visible Trees" line="11">
+<kw name="Count Trees That Are Visible From Outside" library="keywords">
+<kw name="Get Total Tree Count" library="TreeLibrary">
+<var>${total_cnt}</var>
+<msg timestamp="20231202 23:17:23.067" level="INFO">${total_cnt} = 9801</msg>
+<status status="PASS" starttime="20231202 23:17:23.067" endtime="20231202 23:17:23.067"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${log_text}</var>
+<arg>The number of visible trees out of ${total_cnt} is</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231202 23:17:23.067" level="INFO">${log_text} = The number of visible trees out of 9801 is</msg>
+<status status="PASS" starttime="20231202 23:17:23.067" endtime="20231202 23:17:23.067"/>
+</kw>
+<kw name="Get Visible Tree Count" library="TreeLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:23.104" level="INFO">${result} = 1688</msg>
+<status status="PASS" starttime="20231202 23:17:23.067" endtime="20231202 23:17:23.104"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.104" level="INFO">${result} = 1688</msg>
+<status status="PASS" starttime="20231202 23:17:23.104" endtime="20231202 23:17:23.104"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${log_text}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.104" level="INFO">${log_text} = The number of visible trees out of 9801 is</msg>
+<status status="PASS" starttime="20231202 23:17:23.104" endtime="20231202 23:17:23.104"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.066" endtime="20231202 23:17:23.104"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\t${log_text}: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.106" level="INFO">
+	The number of visible trees out of 9801 is: "1688"</msg>
+<status status="PASS" starttime="20231202 23:17:23.105" endtime="20231202 23:17:23.106"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.105" endtime="20231202 23:17:23.106"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.066" endtime="20231202 23:17:23.107"/>
+</test>
+<test id="s1-s8-s1-t2" name="The Highest View Score" line="14">
+<kw name="Find The Highest View Score" library="keywords">
+<kw name="Set Variable" library="BuiltIn">
+<var>${log_text}</var>
+<arg>The highest view score is</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231202 23:17:23.109" level="INFO">${log_text} = The highest view score is</msg>
+<status status="PASS" starttime="20231202 23:17:23.109" endtime="20231202 23:17:23.109"/>
+</kw>
+<kw name="Get Highest Viewscore" library="TreeLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:23.137" level="INFO">${result} = 410400</msg>
+<status status="PASS" starttime="20231202 23:17:23.109" endtime="20231202 23:17:23.137"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.137" level="INFO">${result} = 410400</msg>
+<status status="PASS" starttime="20231202 23:17:23.137" endtime="20231202 23:17:23.137"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${log_text}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.137" level="INFO">${log_text} = The highest view score is</msg>
+<status status="PASS" starttime="20231202 23:17:23.137" endtime="20231202 23:17:23.137"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.109" endtime="20231202 23:17:23.137"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\t${log_text}: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.138" level="INFO">
+	The highest view score is: "410400"</msg>
+<status status="PASS" starttime="20231202 23:17:23.138" endtime="20231202 23:17:23.139"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.138" endtime="20231202 23:17:23.139"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.108" endtime="20231202 23:17:23.139"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:23.055" endtime="20231202 23:17:23.140"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:23.053" endtime="20231202 23:17:23.142"/>
+</suite>
+<suite id="s1-s9" name="Day 09" source="D:\GitRepos\github\advent-of-code-2022\day_09">
+<suite id="s1-s9-s1" name="Rope Bridge" source="D:\GitRepos\github\advent-of-code-2022\day_09\rope_bridge.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Extract Rope Head Movements</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="RopeLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.155" endtime="20231202 23:17:23.155"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.154" endtime="20231202 23:17:23.155"/>
+</kw>
+<kw name="Extract Rope Head Movements" library="keywords">
+<kw name="Load Directions" library="RopeLibrary">
+<status status="PASS" starttime="20231202 23:17:23.155" endtime="20231202 23:17:23.157"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.155" endtime="20231202 23:17:23.157"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.154" endtime="20231202 23:17:23.157"/>
+</kw>
+<test id="s1-s9-s1-t1" name="Tail Position Count With Two Knots" line="11">
+<kw name="Perform Head Movements And Count Unique Tail Positions For 2 Knots" library="keywords" sourcename="Perform Head Movements And Count Unique Tail Positions For ${number:\d+} Knots">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${number}</var>
+<arg>${number}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.158" level="INFO">${number} = 2</msg>
+<status status="PASS" starttime="20231202 23:17:23.158" endtime="20231202 23:17:23.158"/>
+</kw>
+<kw name="Verify Knot Count" library="RopeLibrary">
+<arg>${number}</arg>
+<status status="PASS" starttime="20231202 23:17:23.158" endtime="20231202 23:17:23.158"/>
+</kw>
+<kw name="Initialize Knots" library="RopeLibrary">
+<arg>${number}</arg>
+<status status="PASS" starttime="20231202 23:17:23.159" endtime="20231202 23:17:23.159"/>
+</kw>
+<kw name="Perform Movements" library="RopeLibrary">
+<status status="PASS" starttime="20231202 23:17:23.159" endtime="20231202 23:17:23.174"/>
+</kw>
+<kw name="Get Unique Tail Position Count" library="RopeLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:23.174" level="INFO">${result} = 6470</msg>
+<status status="PASS" starttime="20231202 23:17:23.174" endtime="20231202 23:17:23.174"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${number}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.174" level="INFO">${number} = 2</msg>
+<status status="PASS" starttime="20231202 23:17:23.174" endtime="20231202 23:17:23.174"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.175" level="INFO">${result} = 6470</msg>
+<status status="PASS" starttime="20231202 23:17:23.174" endtime="20231202 23:17:23.175"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.158" endtime="20231202 23:17:23.175"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tNumber of unique tail positions for ${number} knots: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.176" level="INFO">
+	Number of unique tail positions for 2 knots: "6470"</msg>
+<status status="PASS" starttime="20231202 23:17:23.175" endtime="20231202 23:17:23.176"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.175" endtime="20231202 23:17:23.176"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.157" endtime="20231202 23:17:23.177"/>
+</test>
+<test id="s1-s9-s1-t2" name="Tail Position Count With Ten Knots" line="14">
+<kw name="Perform Head Movements And Count Unique Tail Positions For 10 Knots" library="keywords" sourcename="Perform Head Movements And Count Unique Tail Positions For ${number:\d+} Knots">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${number}</var>
+<arg>${number}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.179" level="INFO">${number} = 10</msg>
+<status status="PASS" starttime="20231202 23:17:23.179" endtime="20231202 23:17:23.179"/>
+</kw>
+<kw name="Verify Knot Count" library="RopeLibrary">
+<arg>${number}</arg>
+<status status="PASS" starttime="20231202 23:17:23.179" endtime="20231202 23:17:23.180"/>
+</kw>
+<kw name="Initialize Knots" library="RopeLibrary">
+<arg>${number}</arg>
+<status status="PASS" starttime="20231202 23:17:23.180" endtime="20231202 23:17:23.180"/>
+</kw>
+<kw name="Perform Movements" library="RopeLibrary">
+<status status="PASS" starttime="20231202 23:17:23.180" endtime="20231202 23:17:23.243"/>
+</kw>
+<kw name="Get Unique Tail Position Count" library="RopeLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:23.244" level="INFO">${result} = 2658</msg>
+<status status="PASS" starttime="20231202 23:17:23.243" endtime="20231202 23:17:23.244"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${number}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.244" level="INFO">${number} = 10</msg>
+<status status="PASS" starttime="20231202 23:17:23.244" endtime="20231202 23:17:23.244"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.245" level="INFO">${result} = 2658</msg>
+<status status="PASS" starttime="20231202 23:17:23.245" endtime="20231202 23:17:23.245"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.179" endtime="20231202 23:17:23.245"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tNumber of unique tail positions for ${number} knots: "${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.248" level="INFO">
+	Number of unique tail positions for 10 knots: "2658"</msg>
+<status status="PASS" starttime="20231202 23:17:23.247" endtime="20231202 23:17:23.248"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.246" endtime="20231202 23:17:23.249"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.178" endtime="20231202 23:17:23.249"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:23.147" endtime="20231202 23:17:23.251"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:23.144" endtime="20231202 23:17:23.254"/>
+</suite>
+<suite id="s1-s10" name="Day 10" source="D:\GitRepos\github\advent-of-code-2022\day_10">
+<suite id="s1-s10-s1" name="Cathode-Ray Tube" source="D:\GitRepos\github\advent-of-code-2022\day_10\cathode-ray_tube.robot">
+<test id="s1-s10-s1-t1" name="Sum Of Signal Strengths" line="11">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Extract Instructions</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="RegisterLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.279" endtime="20231202 23:17:23.279"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.278" endtime="20231202 23:17:23.279"/>
+</kw>
+<kw name="Extract Instructions" library="keywords">
+<kw name="Load File" library="RegisterLibrary">
+<status status="PASS" starttime="20231202 23:17:23.280" endtime="20231202 23:17:23.281"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.279" endtime="20231202 23:17:23.281"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.277" endtime="20231202 23:17:23.281"/>
+</kw>
+<kw name="Set First Examination At Cycle 20 And Cycle Step To 40" library="keywords" sourcename="Set First Examination At Cycle ${start:\d+} And Cycle Step To ${step:\d+}">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${start}</var>
+<arg>${start}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.283" level="INFO">${start} = 20</msg>
+<status status="PASS" starttime="20231202 23:17:23.282" endtime="20231202 23:17:23.283"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${step}</var>
+<arg>${step}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.284" level="INFO">${step} = 40</msg>
+<status status="PASS" starttime="20231202 23:17:23.283" endtime="20231202 23:17:23.284"/>
+</kw>
+<kw name="Set Examined Cycles" library="RegisterLibrary">
+<arg>${start}</arg>
+<arg>${step}</arg>
+<status status="PASS" starttime="20231202 23:17:23.284" endtime="20231202 23:17:23.284"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.281" endtime="20231202 23:17:23.285"/>
+</kw>
+<kw name="Execute Instructions And Sum Signal Strengths At Examined Cycles" library="keywords">
+<kw name="Execute Instructions And Examine Cycles" library="RegisterLibrary">
+<status status="PASS" starttime="20231202 23:17:23.285" endtime="20231202 23:17:23.286"/>
+</kw>
+<kw name="Get Examined Cycles" library="RegisterLibrary">
+<var>${cycles}</var>
+<msg timestamp="20231202 23:17:23.286" level="INFO">${cycles} = [20, 60, 100, 140, 180, 220]</msg>
+<status status="PASS" starttime="20231202 23:17:23.286" endtime="20231202 23:17:23.286"/>
+</kw>
+<kw name="Get Sum Of Signal Strengths" library="RegisterLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:23.286" level="INFO">${result} = 12880</msg>
+<status status="PASS" starttime="20231202 23:17:23.286" endtime="20231202 23:17:23.286"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${log_text}</var>
+<arg>\n\tExamined cycles: ${cycles}\n\tSum Of Signal Strengths: "${result}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231202 23:17:23.287" level="INFO">${log_text} = 
+	Examined cycles: [20, 60, 100, 140, 180, 220]
+	Sum Of Signal Strengths: "12880"</msg>
+<status status="PASS" starttime="20231202 23:17:23.286" endtime="20231202 23:17:23.287"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${log_text}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.287" level="INFO">${log_text} = 
+	Examined cycles: [20, 60, 100, 140, 180, 220]
+	Sum Of Signal Strengths: "12880"</msg>
+<status status="PASS" starttime="20231202 23:17:23.287" endtime="20231202 23:17:23.287"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.285" endtime="20231202 23:17:23.287"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>${log_text}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.288" level="INFO">
+	Examined cycles: [20, 60, 100, 140, 180, 220]
+	Sum Of Signal Strengths: "12880"</msg>
+<status status="PASS" starttime="20231202 23:17:23.288" endtime="20231202 23:17:23.289"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.288" endtime="20231202 23:17:23.289"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.276" endtime="20231202 23:17:23.289"/>
+</test>
+<test id="s1-s10-s1-t2" name="Draw CRT Output" line="15">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Extract Instructions</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="RegisterLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.292" endtime="20231202 23:17:23.292"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.291" endtime="20231202 23:17:23.293"/>
+</kw>
+<kw name="Extract Instructions" library="keywords">
+<kw name="Load File" library="RegisterLibrary">
+<status status="PASS" starttime="20231202 23:17:23.293" endtime="20231202 23:17:23.293"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.293" endtime="20231202 23:17:23.294"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.291" endtime="20231202 23:17:23.294"/>
+</kw>
+<kw name="Set CRT Display Width To 40 Pixels" library="keywords" sourcename="Set CRT Display Width To ${width:\d+} Pixels">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${width}</var>
+<arg>${width}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.295" level="INFO">${width} = 40</msg>
+<status status="PASS" starttime="20231202 23:17:23.295" endtime="20231202 23:17:23.295"/>
+</kw>
+<kw name="Set Display Width" library="RegisterLibrary">
+<arg>${width}</arg>
+<status status="PASS" starttime="20231202 23:17:23.295" endtime="20231202 23:17:23.295"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.294" endtime="20231202 23:17:23.295"/>
+</kw>
+<kw name="Execute Instructions, Move Sprite Accordingly And Draw Ouput" library="keywords">
+<kw name="Execute Instructions And Draw Crt" library="RegisterLibrary">
+<status status="PASS" starttime="20231202 23:17:23.296" endtime="20231202 23:17:23.297"/>
+</kw>
+<kw name="Get Crt Output" library="RegisterLibrary">
+<var>${result}</var>
+<msg timestamp="20231202 23:17:23.297" level="INFO">${result} = 
+		####..##....##..##..###....##.###..####.
+		#....#..#....#.#..#.#..#....#.#..#.#....
+		###..#.......#.#..#.#..#....#.#..#.###..
+		#....#.......#.####.###.....#.###..#....
+		#....#..#.#..#.#..#.#.......</msg>
+<status status="PASS" starttime="20231202 23:17:23.297" endtime="20231202 23:17:23.297"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${log_text}</var>
+<arg>\n\tCRT output: ${result}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231202 23:17:23.297" level="INFO">${log_text} = 
+	CRT output: 
+		####..##....##..##..###....##.###..####.
+		#....#..#....#.#..#.#..#....#.#..#.#....
+		###..#.......#.#..#.#..#....#.#..#.###..
+		#....#.......#.####.###.....#.###..#....
+		#....#..#.#...</msg>
+<status status="PASS" starttime="20231202 23:17:23.297" endtime="20231202 23:17:23.297"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${log_text}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.297" level="INFO">${log_text} = 
+	CRT output: 
+		####..##....##..##..###....##.###..####.
+		#....#..#....#.#..#.#..#....#.#..#.#....
+		###..#.......#.#..#.#..#....#.#..#.###..
+		#....#.......#.####.###.....#.###..#....
+		#....#..#.#...</msg>
+<status status="PASS" starttime="20231202 23:17:23.297" endtime="20231202 23:17:23.297"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.296" endtime="20231202 23:17:23.298"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>${log_text}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.298" level="INFO">
+	CRT output: 
+		####..##....##..##..###....##.###..####.
+		#....#..#....#.#..#.#..#....#.#..#.#....
+		###..#.......#.#..#.#..#....#.#..#.###..
+		#....#.......#.####.###.....#.###..#....
+		#....#..#.#..#.#..#.#....#..#.#.#..#....
+		#.....##...##..#..#.#.....##..#..#.####.</msg>
+<status status="PASS" starttime="20231202 23:17:23.298" endtime="20231202 23:17:23.299"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.298" endtime="20231202 23:17:23.299"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.291" endtime="20231202 23:17:23.300"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:23.260" endtime="20231202 23:17:23.301"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:23.256" endtime="20231202 23:17:23.303"/>
+</suite>
+<suite id="s1-s11" name="Day 11" source="D:\GitRepos\github\advent-of-code-2022\day_11">
+<suite id="s1-s11-s1" name="Monkey In The Middle" source="D:\GitRepos\github\advent-of-code-2022\day_11\monkey_in_the_middle.robot">
+<test id="s1-s11-s1-t1" name="Monkey Business After 20 Cycles" line="11">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Initialize Monkeys</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="MonkeyLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.318" endtime="20231202 23:17:23.318"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.317" endtime="20231202 23:17:23.318"/>
+</kw>
+<kw name="Initialize Monkeys" library="keywords">
+<kw name="Load File" library="MonkeyLibrary">
+<status status="PASS" starttime="20231202 23:17:23.319" endtime="20231202 23:17:23.319"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.319" endtime="20231202 23:17:23.319"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.317" endtime="20231202 23:17:23.319"/>
+</kw>
+<kw name="Use Default Worry Level Divider" library="keywords">
+<kw name="Set Worry Level Management" library="MonkeyLibrary">
+<arg>//</arg>
+<arg>${3}</arg>
+<status status="PASS" starttime="20231202 23:17:23.320" endtime="20231202 23:17:23.320"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.320" endtime="20231202 23:17:23.321"/>
+</kw>
+<kw name="Execute 20 Rounds And Calculate Level Of Monkey Bussiness" library="keywords" sourcename="Execute ${round_cnt:\d+} Rounds And Calculate Level Of Monkey Bussiness">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${round_cnt}</var>
+<arg>${round_cnt}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.321" level="INFO">${round_cnt} = 20</msg>
+<status status="PASS" starttime="20231202 23:17:23.321" endtime="20231202 23:17:23.322"/>
+</kw>
+<kw name="Execute Rounds" library="MonkeyLibrary">
+<arg>${round_cnt}</arg>
+<status status="PASS" starttime="20231202 23:17:23.322" endtime="20231202 23:17:23.323"/>
+</kw>
+<kw name="Get All Monkey Interactions" library="MonkeyLibrary">
+<var>@{mb_individual}</var>
+<msg timestamp="20231202 23:17:23.323" level="INFO">@{mb_individual} = [ 225 | 16 | 236 | 158 | 69 | 12 | 232 | 246 ]</msg>
+<status status="PASS" starttime="20231202 23:17:23.323" endtime="20231202 23:17:23.323"/>
+</kw>
+<kw name="Get Monkey Business Level" library="MonkeyLibrary">
+<var>${mb_level}</var>
+<msg timestamp="20231202 23:17:23.324" level="INFO">${mb_level} = 58056</msg>
+<status status="PASS" starttime="20231202 23:17:23.323" endtime="20231202 23:17:23.324"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>@{mb_individual}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.324" level="INFO">@{mb_individual} = [ 225 | 16 | 236 | 158 | 69 | 12 | 232 | 246 ]</msg>
+<status status="PASS" starttime="20231202 23:17:23.324" endtime="20231202 23:17:23.324"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${mb_level}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.325" level="INFO">${mb_level} = 58056</msg>
+<status status="PASS" starttime="20231202 23:17:23.324" endtime="20231202 23:17:23.325"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.321" endtime="20231202 23:17:23.325"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tInteraction of individual monkeys: @{mb_individual}\n\tMonkey Business Level: "${mb_level}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.326" level="INFO">
+	Interaction of individual monkeys: [225, 16, 236, 158, 69, 12, 232, 246]
+	Monkey Business Level: "58056"</msg>
+<status status="PASS" starttime="20231202 23:17:23.326" endtime="20231202 23:17:23.327"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.325" endtime="20231202 23:17:23.327"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.316" endtime="20231202 23:17:23.327"/>
+</test>
+<test id="s1-s11-s1-t2" name="Monkey Business After 10000 Cycles" line="15">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Initialize Monkeys</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="MonkeyLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.330" endtime="20231202 23:17:23.330"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.329" endtime="20231202 23:17:23.330"/>
+</kw>
+<kw name="Initialize Monkeys" library="keywords">
+<kw name="Load File" library="MonkeyLibrary">
+<status status="PASS" starttime="20231202 23:17:23.331" endtime="20231202 23:17:23.331"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.330" endtime="20231202 23:17:23.331"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.329" endtime="20231202 23:17:23.331"/>
+</kw>
+<kw name="Use Custom Worry Level Divider" library="keywords">
+<kw name="Get Product Of Test Dividors" library="MonkeyLibrary">
+<var>${divider}</var>
+<msg timestamp="20231202 23:17:23.332" level="INFO">${divider} = 9699690</msg>
+<status status="PASS" starttime="20231202 23:17:23.332" endtime="20231202 23:17:23.332"/>
+</kw>
+<kw name="Set Worry Level Management" library="MonkeyLibrary">
+<arg>\%</arg>
+<arg>${divider}</arg>
+<status status="PASS" starttime="20231202 23:17:23.332" endtime="20231202 23:17:23.332"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.332" endtime="20231202 23:17:23.333"/>
+</kw>
+<kw name="Execute 10000 Rounds And Calculate Level Of Monkey Bussiness" library="keywords" sourcename="Execute ${round_cnt:\d+} Rounds And Calculate Level Of Monkey Bussiness">
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${round_cnt}</var>
+<arg>${round_cnt}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231202 23:17:23.333" level="INFO">${round_cnt} = 10000</msg>
+<status status="PASS" starttime="20231202 23:17:23.333" endtime="20231202 23:17:23.333"/>
+</kw>
+<kw name="Execute Rounds" library="MonkeyLibrary">
+<arg>${round_cnt}</arg>
+<status status="PASS" starttime="20231202 23:17:23.334" endtime="20231202 23:17:23.923"/>
+</kw>
+<kw name="Get All Monkey Interactions" library="MonkeyLibrary">
+<var>@{mb_individual}</var>
+<msg timestamp="20231202 23:17:23.924" level="INFO">@{mb_individual} = [ 122937 | 20445 | 122291 | 62033 | 32278 | 1538 | 122410 | 122181 ]</msg>
+<status status="PASS" starttime="20231202 23:17:23.923" endtime="20231202 23:17:23.924"/>
+</kw>
+<kw name="Get Monkey Business Level" library="MonkeyLibrary">
+<var>${mb_level}</var>
+<msg timestamp="20231202 23:17:23.924" level="INFO">${mb_level} = 15048718170</msg>
+<status status="PASS" starttime="20231202 23:17:23.924" endtime="20231202 23:17:23.924"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>@{mb_individual}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.924" level="INFO">@{mb_individual} = [ 122937 | 20445 | 122291 | 62033 | 32278 | 1538 | 122410 | 122181 ]</msg>
+<status status="PASS" starttime="20231202 23:17:23.924" endtime="20231202 23:17:23.924"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${mb_level}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.924" level="INFO">${mb_level} = 15048718170</msg>
+<status status="PASS" starttime="20231202 23:17:23.924" endtime="20231202 23:17:23.924"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.333" endtime="20231202 23:17:23.925"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tInteraction of individual monkeys: @{mb_individual}\n\tMonkey Business Level: "${mb_level}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.927" level="INFO">
+	Interaction of individual monkeys: [122937, 20445, 122291, 62033, 32278, 1538, 122410, 122181]
+	Monkey Business Level: "15048718170"</msg>
+<status status="PASS" starttime="20231202 23:17:23.926" endtime="20231202 23:17:23.927"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.926" endtime="20231202 23:17:23.927"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.329" endtime="20231202 23:17:23.928"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:23.307" endtime="20231202 23:17:23.929"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:23.304" endtime="20231202 23:17:23.931"/>
+</suite>
+<suite id="s1-s12" name="Day 12" source="D:\GitRepos\github\advent-of-code-2022\day_12">
+<suite id="s1-s12-s1" name="Hill Climbing Algorithm" source="D:\GitRepos\github\advent-of-code-2022\day_12\hill_climbing_algorithm.robot">
+<test id="s1-s12-s1-t1" name="Find Way From Start To End" line="11">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Initialize Map</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="ExplorationLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.942" endtime="20231202 23:17:23.943"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.942" endtime="20231202 23:17:23.943"/>
+</kw>
+<kw name="Initialize Map" library="keywords">
+<kw name="Load File" library="ExplorationLibrary">
+<status status="PASS" starttime="20231202 23:17:23.943" endtime="20231202 23:17:23.944"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.943" endtime="20231202 23:17:23.944"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.942" endtime="20231202 23:17:23.944"/>
+</kw>
+<kw name="Set Start To Default Start" library="keywords">
+<kw name="Set Start" library="ExplorationLibrary">
+<arg>start</arg>
+<status status="PASS" starttime="20231202 23:17:23.944" endtime="20231202 23:17:23.953"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.944" endtime="20231202 23:17:23.953"/>
+</kw>
+<kw name="Find The Shortest Path To The Highest Point" library="keywords">
+<kw name="Get The Shortest Path To Z" library="ExplorationLibrary">
+<var>${path_len}</var>
+<msg timestamp="20231202 23:17:23.963" level="INFO">${path_len} = {'position': (88, 20), 'steps': 380}</msg>
+<status status="PASS" starttime="20231202 23:17:23.954" endtime="20231202 23:17:23.963"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${path_len}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.964" level="INFO">${path_len} = {'position': (88, 20), 'steps': 380}</msg>
+<status status="PASS" starttime="20231202 23:17:23.964" endtime="20231202 23:17:23.964"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.954" endtime="20231202 23:17:23.964"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe shortest path is: "${path_len}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.965" level="INFO">
+	The shortest path is: "{'position': (88, 20), 'steps': 380}"</msg>
+<status status="PASS" starttime="20231202 23:17:23.965" endtime="20231202 23:17:23.966"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.965" endtime="20231202 23:17:23.966"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.941" endtime="20231202 23:17:23.966"/>
+</test>
+<test id="s1-s12-s1-t2" name="Find The Shortest Way From Bottom To The End" line="15">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Prepare File</arg>
+<arg>${FILE}</arg>
+<arg>AND</arg>
+<arg>Initialize Map</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Prepare File" library="keywords">
+<arg>${FILE}</arg>
+<kw name="Set File And Validate" library="ExplorationLibrary">
+<arg>${file_path}</arg>
+<status status="PASS" starttime="20231202 23:17:23.969" endtime="20231202 23:17:23.969"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.968" endtime="20231202 23:17:23.970"/>
+</kw>
+<kw name="Initialize Map" library="keywords">
+<kw name="Load File" library="ExplorationLibrary">
+<status status="PASS" starttime="20231202 23:17:23.970" endtime="20231202 23:17:23.971"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.970" endtime="20231202 23:17:23.972"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.968" endtime="20231202 23:17:23.972"/>
+</kw>
+<kw name="Set Start To Default End" library="keywords">
+<kw name="Set Start" library="ExplorationLibrary">
+<arg>end</arg>
+<status status="PASS" starttime="20231202 23:17:23.972" endtime="20231202 23:17:23.973"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.972" endtime="20231202 23:17:23.974"/>
+</kw>
+<kw name="Find The Shortest Path To The Bottom" library="keywords">
+<kw name="Get The Shortest Path Down" library="ExplorationLibrary">
+<var>${path_len}</var>
+<msg timestamp="20231202 23:17:23.981" level="INFO">${path_len} = {'position': (0, 15), 'steps': 375}</msg>
+<status status="PASS" starttime="20231202 23:17:23.974" endtime="20231202 23:17:23.981"/>
+</kw>
+<kw name="Set Task Variable" library="BuiltIn">
+<arg>${path_len}</arg>
+<doc>Makes a variable available everywhere within the scope of the current task.</doc>
+<msg timestamp="20231202 23:17:23.981" level="INFO">${path_len} = {'position': (0, 15), 'steps': 375}</msg>
+<status status="PASS" starttime="20231202 23:17:23.981" endtime="20231202 23:17:23.981"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.974" endtime="20231202 23:17:23.981"/>
+</kw>
+<kw name="Log Result" library="keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>\n\tThe shortest path is: "${path_len}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231202 23:17:23.983" level="INFO">
+	The shortest path is: "{'position': (0, 15), 'steps': 375}"</msg>
+<status status="PASS" starttime="20231202 23:17:23.982" endtime="20231202 23:17:23.983"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.982" endtime="20231202 23:17:23.984"/>
+</kw>
+<status status="PASS" starttime="20231202 23:17:23.967" endtime="20231202 23:17:23.984"/>
+</test>
+<status status="PASS" starttime="20231202 23:17:23.935" endtime="20231202 23:17:23.986"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:23.932" endtime="20231202 23:17:23.988"/>
+</suite>
+<status status="PASS" starttime="20231202 23:17:22.736" endtime="20231202 23:17:23.990"/>
+</suite>
+<statistics>
+<total>
+<stat pass="24" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="24" fail="0" skip="0" id="s1" name="Advent-Of-Code-2022">Advent-Of-Code-2022</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Day 01">Advent-Of-Code-2022.Day 01</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Calorie Counting">Advent-Of-Code-2022.Day 01.Calorie Counting</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="Day 02">Advent-Of-Code-2022.Day 02</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2-s1" name="Rock Paper Scissors">Advent-Of-Code-2022.Day 02.Rock Paper Scissors</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s3" name="Day 03">Advent-Of-Code-2022.Day 03</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s3-s1" name="Rucksack Reorganization">Advent-Of-Code-2022.Day 03.Rucksack Reorganization</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s4" name="Day 04">Advent-Of-Code-2022.Day 04</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s4-s1" name="Camp Cleanup">Advent-Of-Code-2022.Day 04.Camp Cleanup</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s5" name="Day 05">Advent-Of-Code-2022.Day 05</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s5-s1" name="Supply Stacks">Advent-Of-Code-2022.Day 05.Supply Stacks</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s6" name="Day 06">Advent-Of-Code-2022.Day 06</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s6-s1" name="Tuning Trouble">Advent-Of-Code-2022.Day 06.Tuning Trouble</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s7" name="Day 07">Advent-Of-Code-2022.Day 07</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s7-s1" name="No Space Left On Device">Advent-Of-Code-2022.Day 07.No Space Left On Device</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s8" name="Day 08">Advent-Of-Code-2022.Day 08</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s8-s1" name="Tree Top Tree House">Advent-Of-Code-2022.Day 08.Tree Top Tree House</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s9" name="Day 09">Advent-Of-Code-2022.Day 09</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s9-s1" name="Rope Bridge">Advent-Of-Code-2022.Day 09.Rope Bridge</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s10" name="Day 10">Advent-Of-Code-2022.Day 10</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s10-s1" name="Cathode-Ray Tube">Advent-Of-Code-2022.Day 10.Cathode-Ray Tube</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s11" name="Day 11">Advent-Of-Code-2022.Day 11</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s11-s1" name="Monkey In The Middle">Advent-Of-Code-2022.Day 11.Monkey In The Middle</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s12" name="Day 12">Advent-Of-Code-2022.Day 12</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s12-s1" name="Hill Climbing Algorithm">Advent-Of-Code-2022.Day 12.Hill Climbing Algorithm</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
