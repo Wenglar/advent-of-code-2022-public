@@ -8,7 +8,7 @@ Python + Robot Framework (https://robotframework.org/)
 ## Results
 - Times to come to a Q&D ("quick" and dirty) solution in Python.
 - Mark if the solution was also written in Robot Framework (RF).
-- To run all Robot Framework files at once, use `robot .`
+- To run all Robot Framework files at once, use `robot --outputdir=docs .`
 
 | Day Nr. | Part 1 time | Part 2 time | Total Time | Part 1 RF | Part 2 RF |
 | ------- | ----------- | ----------- | ---------- | --------- | --------- |
@@ -37,3 +37,6 @@ Python + Robot Framework (https://robotframework.org/)
 |      23 |      60 min |      10 min | 1 h 10 min |           |           |
 |      24 |      60 min |      20 min | 1 h 20 min |           |           |
 |      25 |  1 h 00 min |           - | 1 h 00 min |           |           |
+
+### Robot Framework output
+https://wenglar.github.io/advent-of-code-2022-public/report.html
